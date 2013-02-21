@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Origin</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/user_home.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href='index.html' id='logo'>Origin</a>
+        <nav>
+          <ul class="nav pull-right">
+              <li><a href='originFavorites.html'>Favorites</a></li>
+              <li><a href='originReceipts.html'>Receipts</a></li>
+              <li id="fat-menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Alexander Cihla<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href='userHome.html'>Profile</a></li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href='index.html'>Sign out</a>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="span10">
+          <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item"> <a href="news1.html"> <img src="img/tjrecall.jpg"> </a> </div>
+              <div class="item"> <a href="news2.html"> <img src="img/fda.jpg"> </a> </div>
+              <div class="item"> <a href="news3.html"> <img src="img/blueberries.jpg"> </a> </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        <div class="row well">
+          <table class="table table-bordered table-striped">
+            <tr>
+              <td>Your last purchase was:</td>
+              <td><a href="originReceipts.html">10/22/2012</a></td>
+            </tr>
+            <tr>
+              <td>Your favorite retailer is:</td>
+              <td><a href="maryDairyProfile.html">Mary Dairy</a></td>
+            </tr>
+            <tr>
+              <td>Recommendations sent:</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td>Recommendations received:</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td>Average Origin Rating:</td>
+              <td>7.6</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="span2">
+        <div class="btn-group btn-group-vertical well" data-toggle="button-checkbox">
+          <button type="button" class="btn btn-primary btn-large btn-block" style="width: 200px">Choose Your Values</button>
+          <button type="button" class="btn btn-large btn-block">Personal Health</button>
+          <button type="button" class="btn btn-large btn-block">Worker's Rights</button>
+          <button type="button" class="btn btn-large btn-block">Sustainability</button>
+          <button type="button" class="btn btn-large btn-block">Carbon Footprint</button>
+          <button type="button" class="btn btn-large btn-block">Local Impact</button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+    <ul>
+      <li><a href='http://bid.berkeley.edu/cs160-fall12/index.php/Group:19'>About Us</a></li>
+      <li><a href='mission.html'>Mission</a></li>
+      <li><a href='contact.html'>Contact</a></li>
+      <li class="text-right">An Origin Project Tangible</li>
+    </ul>
+    </footer>
+  </div>
+</body>
+</html>

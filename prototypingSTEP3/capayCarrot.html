@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Origin</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/originProfiles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var value;
+        var upfirsttime = true;
+        var downfirsttime = true;
+
+        $("#favorite").click(function(){
+          $("#favorite").replaceWith('<button class="btn btn-primary disabled offset1" type = "button">Favorited!</button>');
+        });
+
+        $("textarea").keyup(function(){
+          value = $(this).val();
+        });
+
+        $("#submit").click(function(){
+          if (value != undefined) {
+            $("#comments").append("<blockquote><p>" + value + "</p><small>Alexander Cihla</small></blockquote>")
+          }
+        });
+
+        $(".icon-thumbs-up").click(function(){
+          if (upfirsttime && downfirsttime){
+            var newvalue = parseInt($('#uprating').html()) + 1
+            $('#uprating').html(newvalue.toString())
+            upfirsttime = false
+          }
+          
+        });
+
+        $(".icon-thumbs-down").click(function(){
+          if (downfirsttime && upfirsttime){
+            var nv = parseInt($('#downrating').html()) + 1
+            $('#downrating').html(nv.toString())
+            downfirsttime = false
+          }
+        });
+      });
+    </script>
+</head>
+<body>
+  <header class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href='index.html' id='logo'>Origin</a>
+        <nav>
+          <ul class="nav pull-right">
+              <li><a href='originFavorites.html'>Favorites</a></li>
+              <li><a href='originReceipts.html'>Receipts</a></li>
+              <li id="fat-menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Alexander Cihla<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href='userHome.html'>Profile</a></li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href='index.html'>Sign out</a>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Capay Carrot 3lb</h1>
+    <div class = "row-fluid">
+      <div class = "span6">
+        <ul class="thumbnails">
+          <div class="thumbnail">
+            <img src="img/CapayOrganicLogoColor.gif" alt="">
+            <div class="caption">
+              <p>Look into our other products. All grown through sustainable practice and natural means.</p>
+              <dl class="dl-horizontal">
+                <dt>Origin Rating</dt>
+                <dd><button class="btn btn-warning" type = "button">75</button></dd>
+                <dt>Location</dt>
+                <dd>Capay Valley, CA</dd>
+                <dt>Founding</dt>
+                <dd>Larry Jenkins, 1990</dd>
+                <dt>Owner/Family History</dt>
+                <dd>6 generations and always family owned</dd>
+                <dt>Acreage</dt>
+                <dd>380</dd>
+                <dt>Number of Employees</dt>
+                <dd>4</dd>
+                <dt>Goods Produced</dt>
+                <dd>Carrots, Strawberries, Potatoes, and Squash</dd>
+                <dt>Soil Conditions</dt>
+                <dd>Rich, high organic content, clay-layden</dd>
+                <dt>Pesticides</dt>
+                <dd>No</dd>
+                <dt>Free Range Chicken</dt>
+                <dd>N/A</dd>
+                <dt>Grass-fed Beef</dt>
+                <dd>N/A</dd>
+                <dt>Other relevant data</dt>
+                <dd></dd>
+              </dl>
+            </div>
+          </div>
+        </ul><br>
+      </div>
+      <div class = "span5 offset1">
+        <div style="margin-bottom:20px;width:330px">
+          <div style="float:left;width:150px"><button id = "favorite" class="btn btn-primary offset1" type = "button">Make Favorite</button></div>
+          <div style="float:right;width:150px"><a href = "recommendCarrot.html" id = "recommend" class="btn btn-primary offset2" type = "button">Recommend</a></div>
+        </div><br>
+        <br><div class="row-fluid"><textarea rows="3" class="span12" placeholder="Leave Feedback"></textarea></div>
+        <div class="row-fluid"><button id="submit" class="btn span3">Submit</button><div class="span2 offset1"><a href="#"><i class="icon-thumbs-up"></i></a><div id="uprating">3244</div></div><div class="span2"><a href="#"><i class="icon-thumbs-down"></i></a><div id="downrating">836</div></div></div><br>
+        <div id="comments">
+          <blockquote><p>Good taste Carrot</p><small>Barney Stinson</small></blockquote>
+          <blockquote><p>Very nice looking, and I think it is organic.</p><small>Kim Kardashian</small></blockquote>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+    <ul>
+      <li><a href='http://bid.berkeley.edu/cs160-fall12/index.php/Group:19'>About Us</a></li>
+      <li><a href='mission.html'>Mission</a></li>
+      <li><a href='contact.html'>Contact</a></li>
+      <li class="text-right">An Origin Project Tangible</li>
+    </ul>
+    </footer>
+  </div>
+  </div>
+</body>
+</html>

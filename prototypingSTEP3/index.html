@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Origin</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".carousel").carousel({
+          interval: 5000
+        });
+      });
+    </script>
+</head>
+<body>
+  <header class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href='index.html' id='logo'>Origin</a>
+        <nav>
+          <ul class="nav pull-right">
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div id="myCarousel" class="carousel slide">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="active item"><img src="img/item1.jpg"></div>
+        <div class="item"><img src="img/item2.jpg"></div>
+        <div class="item"><img src="img/item3.jpg"></div>
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+    <div class="row" id="sign-in-bar">
+      <div class="span2">
+        <h3 class="title-align-middle">Sign In</h3>
+      </div>
+      <div class="span4">
+        <input type="text" id="inputEmail" placeholder="Email">
+      </div>
+
+      <div class="span4">
+        <input type="password" id="inputPassWord" placeholder="Password">
+      </div>
+      <div class="span2">
+        <a class="btn btn-primary" href="userHome.html">Log In</a>
+        <p id="not-member">Not a member? <a href="signUp.html">Sign up!</p>
+      </div>
+	  
+    </div>
+    <footer class="footer">
+    <ul>
+      <li><a href='http://bid.berkeley.edu/cs160-fall12/index.php/Group:19'>About Us</a></li>
+      <li><a href='mission.html'>Mission</a></li>
+      <li><a href='contact.html'>Contact</a></li>
+      <li class="text-right">An Origin Project Tangible</li>
+    </ul>
+    </footer>
+  </div>
+</body>
+</html>

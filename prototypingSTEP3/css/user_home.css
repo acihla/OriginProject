@@ -1,0 +1,61 @@
+/* User profile */
+
+.profile-box {
+  border: 1px solid #aaa;
+}
+
+.prioritize-checkbox {
+  float: right;
+}
+
+.profile-list {
+	padding:30px;
+}
+
+.profile-item {
+	padding-left:70px;
+	}
+
+#origin-rating {
+  text-align:center;
+}
+
+.rating-box, .rating {
+  text-align: center;
+}
+
+.rating-box {
+  width: 3em;
+  height: 2em;
+  padding-top: 0.5em;
+  border: 1px solid #aaa;
+  font-size: 24pt;
+}
+
+#username {
+  text-align: left;
+}
+
+a.username {
+  font-weight: bold;
+  float: left;
+}
+
+
+/* temporary */
+.graph {
+  width: 200px;
+  height: 200px;
+  margin-top: 0.5em;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:20px;
+}
+
+#rating_graph {
+}
+
+/* buttons */
+
+.btn-group-vertical .btn {
+}

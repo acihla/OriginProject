@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Origin</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/originProfiles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+          $(document).ready(function(){
+            var value;
+            var upfirsttime = true;
+            var downfirsttime = true;
+
+            $("#favorite").click(function(){
+              $("#favorite").replaceWith('<button class="btn btn-primary disabled offset1" type = "button">Favorited!</button>');
+            });
+
+            $("textarea").keyup(function(){
+              value = $(this).val();
+            });
+
+            $("#submit").click(function(){
+              if (value != undefined) {
+                $("#comments").append("<blockquote><p>" + value + "</p><small>Alexander Cihla</small></blockquote>")
+              }
+            });
+
+            $(".icon-thumbs-up").click(function(){
+              if (upfirsttime && downfirsttime){
+                var newvalue = parseInt($('#uprating').html()) + 1
+                $('#uprating').html(newvalue.toString())
+                upfirsttime = false
+              }
+              
+            });
+
+            $(".icon-thumbs-down").click(function(){
+              if (downfirsttime && upfirsttime){
+                var nv = parseInt($('#downrating').html()) + 1
+                $('#downrating').html(nv.toString())
+                downfirsttime = false
+              }
+            });
+          });
+        </script>
+</head>
+<body>
+  <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href='index.html' id='logo'>Origin</a>
+            <nav>
+              <ul class="nav pull-right">
+                  <li><a href='originFavorites.html'>Favorites</a></li>
+                  <li><a href='originReceipts.html'>Receipts</a></li>
+                  <li id="fat-menu" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Alexander Cihla<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href='userHome.html'>Profile</a></li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href='index.html'>Sign out</a>
+                      </li>
+                    </ul>
+                  </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+  <div class="container">
+    <h1>Georgia Peaches</h1>
+    <div class = "row-fluid">
+      <div class = "span6">
+        <ul class="thumbnails">
+          <div class="thumbnail">
+            <img src="img/gpeach.jpg" alt="">
+            <div class="caption">
+              <p>Soft and sweet. The best peaches in the south.</p>
+              <dl class="dl-horizontal">
+                <dt>Origin Rating</dt>
+                <dd><button class="btn btn-success" type = "button">89</button></dd>
+                <dt>Location</dt>
+                <dd>Georgia</dd>
+                <dt>Founding</dt>
+                <dd>Jeff Holmes, 1954</dd>
+                <dt>Owner/Family History</dt>
+                <dd>2 generations and always family owned</dd>
+                <dt>Acreage</dt>
+                <dd>803</dd>
+                <dt>Number of Employees</dt>
+                <dd>9</dd>
+                <dt>Goods Produced</dt>
+                <dd>Peaches, Apples, Plums</dd>
+                <dt>Soil Conditions</dt>
+                <dd>Dark and fine, silty, riverbed</dd>
+                <dt>Pesticides</dt>
+                <dd>Yes</dd>
+                <dt>Free Range Chicken</dt>
+                <dd>N/A</dd>
+                <dt>Grass-fed Beef</dt>
+                <dd>N/A</dd>
+                <dt>Other relevant data</dt>
+                <dd></dd>
+              </dl>
+            </div>
+          </div>
+        </ul><br>
+      </div>
+      <div class = "span1">
+        <h2 style="padding-top:200px">TO</h2>
+      </div>
+      <div class="span4" style="width=100%; height=70%; text-align:center; position:center center; padding-top:60px">
+        <span>Recommend by Email</span></br></br>
+    <input type="text" placeholder="Email">
+        </br></br>
+    <a class="btn btn-success" href="underConstruction.html">Send Recommendation!</a>
+        <h2 style="margin-bottom:15px;margin-top:15px">or</h2>
+    <span style="padding-bottom:10px;">Recommend by</span></br></br>
+        <a style="padding-top:100px;margin-right:20px;" href="https://www.facebook.com/aj.cihla?ref=ts&fref=ts "target="_blank" align="left"><img src="http://www.niftybuttons.com/wood/64px/facebook.png" title="Facebook(Recommend by Facebook!)" border="0"></a><a href="https://twitter.com/AlexanderCihla" target="_blank" align="left"><img src="http://www.niftybuttons.com/wood/64px/twitter.png" title="Twitter(Recommend by Twitter!)" border="0"></a><br><br>
+        
+      </div>
+    </div>
+    <footer class="footer">
+    <ul>
+      <li><a href='http://bid.berkeley.edu/cs160-fall12/index.php/Group:19'>About Us</a></li>
+      <li><a href='mission.html'>Mission</a></li>
+      <li><a href='contact.html'>Contact</a></li>
+      <li class="text-right">An Origin Project Tangible</li>
+    </ul>
+    </footer>
+  </div>
+  </div>
+</body>
+</html>
